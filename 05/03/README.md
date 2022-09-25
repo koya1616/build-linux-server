@@ -55,6 +55,32 @@ google.co.jp.		152	IN	A	172.217.174.99
 ;; SERVER: 10.7.161.1#53(10.7.161.1)
 ;; WHEN: Sat Sep 24 18:13:52 JST 2022
 ;; MSG SIZE  rcvd: 57
+```
+```
+% netstat(ss) ネットワークソケット情報を表示する
+% netstat(ss) [オプション]
+
+% netstat(ss)
+Active Internet connections
+Proto Recv-Q Send-Q  Local Address          Foreign Address        (state)    
+tcp4       0      0  aoyamakuyanoair.49630  lb-140-82-112-26.https ESTABLISHED
+tcp4       0      0  aoyamakuyanoair.49629  40.78.253.204.https    ESTABLISHED
+```
+```
+nmapはポートスキャンを行う
+ネットワークポートを順にスキャンして空いているポートを調べること
+% nmap オプション　ホスト名
+
+% nmap localhost
+Starting Nmap 7.93 ( https://nmap.org ) at 2022-09-25 19:12 JST
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.000050s latency).
+Other addresses for localhost (not scanned): ::1
+Not shown: 996 closed tcp ports (conn-refused)
+PORT     STATE SERVICE
+3306/tcp open  mysql
+5000/tcp open  upnp
+5432/tcp open  postgresql
 
 ```
 
